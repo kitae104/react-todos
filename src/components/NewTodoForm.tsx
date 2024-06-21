@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-function NewTodoForm(props: { addTodo: Function }) {
+// 함수형 컴포넌트로 작성
+export const NewTodoForm: React.FC<{ addTodo: Function }> = (props) => {
 
     const [description, setDescription] = useState('');
     const [assigned, setAssigned] = useState('');
@@ -47,6 +48,3 @@ function NewTodoForm(props: { addTodo: Function }) {
         </div>
     )
 }
-
-
-export default NewTodoForm
